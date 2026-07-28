@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delia Puspitasari | Portfolio</title>
+    <meta name="description" content="Portfolio Delia Puspitasari - Front End Developer & Student PPLG SMKN 3 Banjar">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css?v=2">
+    <!-- <link rel="stylesheet" href="output.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!--==============================
+    PRELOADER AESTHETIC
+    ==============================-->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <h2 class="loader-text">Loading...</h2>
+            <p class="loader-sub">Welcome to Delia's Space ✨</p>
+        </div>
+    </div>
+    <!--==============================================================================
+    HEADER
+    ==============================================================================-->
+    <header class="header">
+    <a href="#home" class="logo">Delia<span>.</span></a>
+
+    <!-- Tombol Garis 3 (Hamburger Menu) -->
+    <button class="menu-btn" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    </header>
+    
+    <!--==============================
+    HERO / HOME SECTION
+    ==============================-->
+    <section class="home" id="home">
+    <div class="home-content">
+        <!-- Quote Badge -->
+        <div class="quote-badge">
+            <span>"Practice Makes Perfect" . :D</span>
+        </div>
+
+        <!-- Headline Utama -->
+        <h2 class="hero-title"> Hi, saya <span class="wave-emoji">👋</span><br></h2>
+        <h1><span class="aesthetic-name">Delia Puspitasari</span></h1>
+        
+
+        <!-- Teks Efek Mengetik di Bawah Nama -->
+        <div class="typing-container">
+            <span id="typing-text"></span><span class="typing-cursor">|</span>
+        </div>
+
+        <!-- Deskripsi Teks -->
+        <p>
+            Saya memiliki ketertarikan dalam bidang <span>Programming</span>. 
+            Saya berfokus pada pengembangan website yang modern, responsif, dan mudah digunakan.
+        </p>
+
+        <!-- Tombol Aksi (Contact Me & View Project) -->
+        <div class="hero-btn">
+            <a href="#contact" class="btn">
+                Contact Me
+            </a>
+            <a href="#projects" class="btn btn-outline">
+                View Project
+            </a>
+        </div>
+    </div>
+
+    <!-- Foto Utama & Backdrop -->
+    <div class="home-image">
+        <div class="image-backdrop"></div>
+        <img src="assets/images/deliaa.png" alt="Delia Puspitasari" class="main-photo">
+        <div class="floating-icon ribbon">🎀</div>
+        <div class="floating-icon star">✨</div>
+    </div>
+    </section>
+
+    <!-- ==============================
+        ABOUT ME SECTION
+    ============================== -->
+<section class="about" id="about">
+    <div class="about-card-wrapper">
+        <div class="about-grid">
+            
+            <!-- Kolom 1: Foto Profil & Floating Emoji -->
+            <div class="about-img-box">
+                <div class="about-img-backdrop"></div>
+                <img src="assets/images/deliaa.png" alt="Tentang Saya" class="about-photo">
+                
+                <div class="about-float-icon top-left">🐱</div>
+                <div class="about-float-icon bottom-right">🌸</div>
+            </div>
+
+            <!-- Kolom 2: Deskripsi Teks & Stat Counter Estetis -->
+            <div class="about-text-content">
+                <h2>👋 Tentang Saya</h2>
+                <p>
+                    Halo! Saya <span>Delia Puspitasari</span>, seorang <mark class="highlight">junior Web Developer</mark> 
+                    berbasis di <strong>Ciamis / Banjar</strong>. Saat ini saya menempuh pendidikan di 
+                    <strong>SMKN 3 Banjar</strong> jurusan <strong>PPLG</strong>. Saya berdedikasi menciptakan pengalaman web yang 
+                    bersih, responsif, dan interaktif dengan memadukan logika backend dan estetika frontend.
+                </p>
+
+                <!-- Stat Counter Ringkas & Cantik -->
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <h3>4+</h3>
+                        <p>PROYEK SELESAI</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>PPLG</h3>
+                        <p>SMKN 3 BANJAR</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kolom 3: Card Edukasi Timeline -->
+            <div class="education-card">
+                <h3>🎓 Riwayat Pendidikan</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>SD Negeri 1 Sidaharja</h4>
+                            <span>Lulus Tahun 2020</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>SMP Negeri 3 Lakbok</h4>
+                            <span>Lulus Tahun 2023</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item active">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>SMK Negeri 3 Banjar</h4>
+                            <span class="active-tag">SEKARANG — PPLG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- Penutup .about-grid -->
+    </div> <!-- Penutup .about-card-wrapper -->
+</section>
+
+    <!-- ==============================
+        KEAHLIAN & TEKNOLOGI SECTION
+    ============================== -->
+    <section class="skills" id="skills">
+        <div class="skills-header">
+            <h2>Keahlian & Teknologi ✨</h2>
+            <p>Perangkat lunak dan bahasa pemrograman yang saya gunakan.</p>
+            
+            <!-- Toggle Button Skills / Tools -->
+            <div class="skills-toggle">
+                <button class="toggle-btn active" onclick="filterSkills('skills', event)">
+                    <i>&lt;/&gt;</i> Skills
+                </button>
+                <button class="toggle-btn" onclick="filterSkills('tools', event)">
+                    <i>🛠</i> Tools
+                </button>
+            </div>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skillsContainer">
+            <!-- Item 1: Laravel -->
+            <div class="skill-item" data-category="skills">
+                <div class="skill-icon-box">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel">
+                </div>
+                <div class="skill-info">
+                    <h4>Laravel</h4>
+                    <span>FRAMEWORK</span>
+                </div>
+            </div>
+
+            <!-- Item 2: PHP -->
+            <div class="skill-item" data-category="skills">
+                <div class="skill-icon-box">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+                </div>
+                <div class="skill-info">
+                    <h4>PHP</h4>
+                    <span>LANGUAGE</span>
+                </div>
+            </div>
+
+            <!-- Item 3: JavaScript -->
+            <div class="skill-item" data-category="skills">
+                <div class="skill-icon-box">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+                </div>
+                <div class="skill-info">
+                    <h4>JavaScript</h4>
+                    <span>LANGUAGE</span>
+                </div>
+            </div>
+
+            <!-- Item 4: MySQL -->
+            <div class="skill-item" data-category="skills">
+                <div class="skill-icon-box">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                </div>
+                <div class="skill-info">
+                    <h4>MySQL</h4>
+                    <span>DATABASE</span>
+                </div>
+            </div>
+
+            <!-- Item 5: HTML -->
+            <div class="skill-item" data-category="skills">
+                <div class="skill-icon-box">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                </div>
+                <div class="skill-info">
+                    <h4>HTML</h4>
+                    <span>LANGUAGE</span>
+                </div>
+            </div>
+
+            <!-- Item 6: CSS -->
+            <div class="skill-item" data-category="skills">
+                <div class="skill-icon-box">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                </div>
+                <div class="skill-info">
+                    <h4>CSS</h4>
+                    <span>LANGUAGE</span>
+                </div>
+            </div>
+
+            <!-- Tools Items (Hidden by Default) -->
+            <div class="skill-item" data-category="tools" style="display: none;">
+                <div class="skill-icon-box">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode">
+                </div>
+                <div class="skill-info">
+                    <h4>VS Code</h4>
+                    <span>EDITOR</span>
+                </div>
+            </div>
+
+            <div class="skill-item" data-category="tools" style="display: none;">
+                <div class="skill-icon-box">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                </div>
+                <div class="skill-info">
+                    <h4>Git & GitHub</h4>
+                    <span>VERSION CONTROL</span>
+                </div>
+            </div>
+
+            <div class="skill-item" data-category="tools" style="display: none;">
+                <div class="skill-icon-box">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                </div>
+                <div class="skill-info">
+                    <h4>Figma</h4>
+                    <span>DESIGN</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================
+    PROJECTS SECTION
+    ============================== -->
+    <section class="projects" id="projects">
+    <div class="projects-header">
+        <h2>My Projects</h2>
+        <p>Kumpulan karya dan proyek yang telah saya kerjakan</p>
+    </div>
+
+  <div class="projects-grid">
+
+    <!-- 1. Aplikasi Pengaduan Masyarakat (APM) -->
+    <div class="project-card">
+      <div class="project-img-box">
+        <img src="assets/images/apm.png" alt="Aplikasi Pengaduan Masyarakat">
+      </div>
+      <div class="project-body">
+        <h3>Aplikasi Pengaduan Masyarakat</h3>
+        <p>Aplikasi berbasis web untuk memudahkan masyarakat dalam menyampaikan laporan dan aspirasi secara online serta akurat.</p>
+        <div class="project-actions">
+          <a href="javascript:void(0)" 
+             class="btn-details" 
+             onclick="openModal(
+               'Aplikasi Pengaduan Masyarakat', 
+               'Aplikasi Pengaduan Masyarakat (APM) ini dirancang khusus untuk mempermudah masyarakat dalam menyampaikan pengaduan dan aspirasi secara online. Dilengkapi dengan manajemen laporan petugas, verifikasi realtime, dan sistem lacak status pengaduan.', 
+               'assets/images/apm.png', 
+               'https://github.com/deliapuspitasari/apm-app-delia', 
+               ['HTML', 'CSS', 'PHP', 'MySQL']
+             )">
+            Details 
+          </a>
+          <a href="https://github.com/deliapuspitasari/apm-app-delia" target="_blank" class="btn-icon">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Toko Online -->
+    <div class="project-card">
+      <div class="project-img-box">
+        <img src="assets/images/toko online.png" alt="Toko Online">
+      </div>
+      <div class="project-body">
+        <h3>Toko Online</h3>
+        <p>Platform e-commerce responsif yang dirancang untuk mempermudah transaksi jual beli produk secara efisien.</p>
+        <div class="project-actions">
+          <a href="javascript:void(0)" 
+             class="btn-details" 
+             onclick="openModal(
+               'Toko Online E-Commerce', 
+               'Platform E-Commerce responsif yang menyediakan katalog produk interaktif, fitur keranjang belanja, serta dashboard admin untuk pengelolaan transaksi dan stok produk secara efisien.', 
+               'assets/images/toko online.png', 
+               'https://github.com/deliapuspitasari/toko-online', 
+               ['HTML', 'CSS', 'JavaScript', 'PHP']
+             )">
+            Details 
+          </a>
+          <a href="https://github.com/deliapuspitasari/toko-online" target="_blank" class="btn-icon">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Desain UI Kasir Online -->
+    <div class="project-card">
+      <div class="project-img-box">
+        <img src="assets/images/kasir.png" alt="Desain UI Kasir Online">
+      </div>
+      <div class="project-body">
+        <h3>Desain UI Kasir Online</h3>
+        <p>Perancangan antarmuka aplikasi Point of Sales (POS) yang modern dan ramah pengguna untuk mempercepat proses kasir.</p>
+        <div class="project-actions">
+          <a href="javascript:void(0)" 
+             class="btn-details" 
+             onclick="openModal(
+               'Desain UI Kasir Online (POS)', 
+               'Rancangan antarmuka aplikasi kasir modern (Point of Sales) berfokus pada kemudahan transaksi harian, tata letak produk yang intuitif, serta kemudahan navigasi bagi staf kasir.', 
+               'assets/images/kasir.png', 
+               'https://www.figma.com', 
+               ['Figma', 'UI/UX Design', 'Prototyping']
+             )">
+            Details 
+          </a>
+          <a href="https://www.figma.com" target="_blank" class="btn-icon">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Desain UI Absensi -->
+    <div class="project-card">
+      <div class="project-img-box">
+        <img src="assets/images/absensi.png" alt="Desain UI Absensi">
+      </div>
+      <div class="project-body">
+        <h3>Desain UI Absensi</h3>
+        <p>Rancangan antarmuka aplikasi kehadiran berbasis mobile/web untuk mempermudah pencatatan kehadiran secara terstruktur.</p>
+        <div class="project-actions">
+          <a href="javascript:void(0)" 
+             class="btn-details" 
+             onclick="openModal(
+               'Desain UI Aplikasi Absensi', 
+               'Desain UI/UX sistem presensi kehadiran modern yang intuitif. Memiliki alur pencatatan kehadiran yang ringkas, pengajuan izin/sakit, serta rekapitulasi data absensi bulanan.', 
+               'assets/images/absensi.png', 
+               'https://www.figma.com', 
+               ['Figma', 'Mobile UI', 'Design System']
+             )">
+            Details 
+          </a>
+          <a href="https://www.figma.com" target="_blank" class="btn-icon">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    </section>
+
+    <!-- Modal Detail Project -->
+    <div id="projectModal" class="modal">
+    <div class="modal-card">
+        
+        <!-- Tombol Back Kiri Atas -->
+        <div class="modal-top">
+        <button class="btn-back" onclick="closeModal()">
+            <i class="fas fa-arrow-left"></i> BACK
+        </button>
+        </div>
+
+        <!-- Konten Modal Grid 2 Kolom -->
+        <div class="modal-body-grid">
+        
+        <!-- Kolom Kiri: Judul, Deskripsi, & Tech Stack -->
+        <div class="modal-left">
+            <h2 id="modalTitle" class="modal-project-title">Judul Project</h2>
+            <p id="modalDescription" class="modal-project-desc">
+            Deskripsi project akan muncul di sini...
+            </p>
+            
+            <div class="tech-section">
+            <span class="tech-label"><i class="fas fa-tools"></i> TECHNOLOGIES</span>
+            <div id="modalTech" class="tech-tags">
+                <!-- Tag teknologi akan otomatis diisi via JS -->
+            </div>
+            </div>
+        </div>
+
+        <!-- Kolom Kanan: Preview Gambar & Tombol Github -->
+        <div class="modal-right">
+            <div class="image-preview-card">
+            <img id="modalImage" src="" alt="Project Preview" />
+            </div>
+            <a id="modalGithub" href="#" target="_blank" class="btn-github">
+            Github <i class="fab fa-github"></i>
+            </a>
+        </div>
+
+        </div>
+
+    </div>
+    </div> 
+<!--==========================================================================
+    EXPERIENCE SECTION (CLEAN & CENTERED)
+==========================================================================-->
+<section class="experience" id="experience">
+  
+  <!-- Header Center -->
+  <div class="experience-header">
+    <h2>Experience ✨</h2>
+    <p>Klik tombol untuk melihat detail kegiatanku!</p>
+  </div>
+
+  <!-- Toggle Switch (Pill Button Emas) -->
+  <div class="exp-toggle">
+    <button class="exp-btn active" data-target="magang">Magang</button>
+    <button class="exp-btn" data-target="tefa">TEFA</button>
+  </div>
+
+  <!-- Tab 1: Magang (Aktif) -->
+  <div class="exp-content active" id="magang">
+    <!-- KODE BENAR -->
+<div class="exp-card">
+    <span class="exp-badge">JULI 2026 – DESEMBER 2026</span>
+    <h3>Web Developer Intern</h3>
+    <h4>Access Media</h4>
+    <p>Membangun fitur aplikasi berbasis Laravel dan optimasi sistem sesuai standar industri.</p>
+      <button class="btn btn-detail-gold" onclick="openExpModal(
+        'Detail Kegiatan',
+        'ACCESS MEDIA',
+        'assets/images/access.jpg',
+        [
+          'Membangun web responsif menggunakan Laravel.',
+          'Slicing desain dari Figma ke komponen kode.',
+          'Bekerja sama dalam tim.',
+          'Melakukan testing dan debugging fitur aplikasi.'
+        ]
+      )">
+        Lihat Detail ✨
+      </button>
+    </div>
+  </div>
+
+  <!-- Tab 2: TEFA (Sembunyi) -->
+  <div class="exp-content" id="tefa">
+    <div class="exp-card">
+      <span class="exp-badge">JULI 2025 – JUNI 2027</span>
+      <h3>UI/UX & Web Developer</h3>
+      <h4>Teaching Factory (TEFA)</h4>
+      <p>Mengerjakan proyek nyata dari klien industri di lingkungan sekolah.</p>
+      
+      <button class="btn btn-detail-gold" onclick="openExpModal(
+        'Detail Kegiatan',
+        'TEFA SOFTWARE HOUSE',
+        'assets/images/tefa.jpg',
+        [
+          'Merancang wireframe dan prototype UI/UX aplikasi.',
+          'Mengimplementasikan desain sistem ke bentuk kode web.',
+          'Melakukan komit kode secara rutin menggunakan Git/GitHub.',
+          'Mempresentasikan hasil proyek kepada mentor.'
+        ]
+      )">
+        Lihat Detail ✨
+      </button>
+    </div>
+  </div>
+
+</section>
+
+<!--==============================================================================
+    MODAL DETAIL KEGIATAN EXPERIENCE (Diletakkan terpisah di luar section)
+==============================================================================-->
+<div class="exp-modal" id="expModal">
+  <div class="exp-modal-card">
+    
+    <!-- Modal Header -->
+    <div class="exp-modal-header">
+      <div>
+        <h2 id="expModalTitle">Detail Kegiatan</h2>
+        <span class="exp-modal-subtitle" id="expModalCompany">@ ACCESS MEDIA</span>
+      </div>
+      <button class="exp-modal-close" onclick="closeExpModal()">&times;</button>
+    </div>
+
+    <!-- Modal Body Grid (2 Kolom) -->
+    <div class="exp-modal-body">
+      <!-- Kolom Kiri: Foto -->
+      <div class="exp-modal-img-box">
+        <img id="expModalImg" src="" alt="Detail Kegiatan">
+      </div>
+
+      <!-- Kolom Kanan: Poin Pengalaman -->
+      <div class="exp-modal-content">
+        <h3>PENGALAMAN SAYA:</h3>
+        <ul id="expModalList">
+          <!-- Poin-poin akan diisi dinamis via JS -->
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    <!-- ==============================
+        CONTACT SECTION
+    ============================== -->
+    <section class="contact" id="contact">
+        <div class="contact-header">
+            <h2>Hubungi Saya</h2>
+            <p>Mari Terhubung & Berkolaborasi ✨</p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Email Card -->
+            <a href="mailto:dpuspitasarii@gmail.com" target="_blank" class="contact-card">
+                <div class="contact-icon email">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact-info">
+                    <span>EMAIL SAYA</span>
+                    <h4>dpuspitasarii961@gmail.com</h4>
+                </div>
+                <div class="contact-arrow"></div>
+            </a>
+
+            <!-- WhatsApp Card -->
+            <a href="https://wa.me/6285703159380" target="_blank" class="contact-card">
+                <div class="contact-icon whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="contact-info">
+                    <span>WHATSAPP</span>
+                    <h4>+62 857 0315 9380</h4>
+                </div>
+                <div class="contact-arrow"></div>
+            </a>
+
+            <!-- Instagram Card -->
+            <a href="https://instagram.com/_deliapuspitaa29" target="_blank" class="contact-card">
+                <div class="contact-icon instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="contact-info">
+                    <span>INSTAGRAM</span>
+                    <h4>@_deliapuspitaa29</h4>
+                </div>
+                <div class="contact-arrow"></div>
+            </a>
+
+            <!-- GitHub Card -->
+            <a href="https://github.com/deliapuspitasari" target="_blank" class="contact-card">
+                <div class="contact-icon github">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="contact-info">
+                    <span>GITHUB</span>
+                    <h4>deliapuspitasari</h4>
+                </div>
+                <div class="contact-arrow"></div>
+            </a>
+        </div>
+        
+    </section>
+
+
+    <!-- ==============================
+        FOOTER
+    ============================== -->
+    <footer class="footer">
+        <h2>Delia Puspitasari</h2>
+        <p>Thank you for visiting my portfolio website.</p>
+
+        <div class="footer-social">
+            <a href="https://wa.me/6285703159380" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://instagram.com/_deliapuspitaa29" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/deliapuspitasari" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:dpuspitasarii961@gmail.com" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+
+        <p class="copyright">© 2026 Delia Puspitasari. All Rights Reserved.</p>
+    </footer>
+
+    <!-- ==============================
+        SCRIPTS
+    ============================== -->
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
+    <!-- Custom Script -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
