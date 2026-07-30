@@ -901,6 +901,78 @@ mark.highlight {
     line-height: 1.6 !important;
     margin: 0 !important;
 }
+/* ==========================================================================
+   EXPERIENCE GALLERY EXTENSION
+========================================================================== */
+
+/* Tombol Dokumentasi */
+.btn-gallery-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.1));
+  border-radius: 8px;
+  color: var(--text, #ffffff);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-gallery-toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(75, 121, 161, 0.5);
+}
+
+.btn-gallery-toggle .arrow-icon {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.btn-gallery-toggle.active .arrow-icon {
+  transform: rotate(180deg);
+}
+
+/* Container Galeri Foto */
+.exp-gallery {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.exp-gallery.open {
+  max-height: 400px; /* Batas tinggi maksimal saat terbuka */
+  margin-top: 14px;
+}
+
+/* Grid Foto */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 Kolom di HP */
+  }
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.04);
+}
 /*==========================================================================
    7. SKILLS & TECHNOLOGIES
 ==========================================================================*/
@@ -1154,7 +1226,67 @@ mark.highlight {
     background: rgba(75, 121, 161, 0.1);
     transform: translateY(-2px);
 }
+/* ==========================================================================
+   PERBAIKAN FOTO MODAL DETAIL PROJECT (PASTI UTUH & TIDAK TERPOTONG)
+========================================================================== */
 
+/* 1. Latar Belakang Modal Overlay */
+#projectModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 2. Gambar Modal Detail (#modalImg) */
+#modalImg, 
+#modalImage {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 220px !important;    /* Mencegah gambar terlalu tinggi */
+  object-fit: contain !important;  /* KUNCI UTAMA: Gambar utuh 100% tanpa crop! */
+  border-radius: 8px !important;
+  display: block !important;
+  margin: 0 auto;
+}
+
+/* 3. Pembungkus Elemen Gambar Modal (Jika Ada) */
+.modal-img-box,
+.project-modal-img,
+#modalImg-container {
+  width: 100%;
+  background: #ffffff;             /* Latar putih agar UI aplikasi menyatu sempurna */
+  border-radius: 12px;
+  padding: 6px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* 4. Tag / Badges (#modalTechs) */
+#modalTechs .tag,
+#modalTech .tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: 4px 10px;
+  margin: 2px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  color: #7cb0dc;
+  font-weight: 600;
+}
 /*==============================================================================
    9. EXPERIENCE SECTION & MODAL DETAIL (DI-REDESIGN BIAR GA SEDERHANA)
 ==============================================================================*/
@@ -1543,7 +1675,7 @@ mark.highlight {
 }
 
 .contact-info h5 {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     color: var(--white);
     word-break: break-all;

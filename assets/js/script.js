@@ -110,10 +110,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (typingElement) {
     const words = [
-      "Junior Web Developer 💻",
-      "Frontend Developer 🎨",
-      "Backend Enthusiast ⚙️",
-      "PPLG Student 🎓"
+      "Junior Web Developer",
+      "Frontend Developer",
+      "Backend Enthusiast",
+      "PPLG Student"
     ];
 
     let wordIndex = 0;
@@ -329,7 +329,7 @@ window.addEventListener("load", () => {
       preloader.style.visibility = "hidden";
     }, 500);
   }
-});
+});fro
 
 /*==========================================================================
     9. CONSOLE WELCOME MESSAGE
@@ -342,3 +342,17 @@ console.log(
   "%cDeveloped with ❤️ using HTML, CSS & JavaScript",
   "color:white;font-size:14px;"
 );
+
+function toggleGallery(button) {
+  const gallery = button.nextElementSibling;
+  
+  // Toggle class active dan open
+  button.classList.toggle('active');
+  gallery.classList.toggle('open');
+  
+  // Ubah ikon & teks secara otomatis
+  const isExpanded = gallery.classList.contains('open');
+  button.innerHTML = isExpanded 
+    ? '<i class="bx bx-images"></i> Sembunyikan Dokumentasi <i class="bx bx-chevron-down arrow-icon"></i>'
+    : '<i class="bx bx-images"></i> Lihat Dokumentasi <i class="bx bx-chevron-down arrow-icon"></i>';
+}
