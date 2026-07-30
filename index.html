@@ -52,7 +52,6 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
     </nav>
     </header>
@@ -108,16 +107,7 @@
     ============================== -->
 <section class="about" id="about">
     <div class="about-card-wrapper">
-        <div class="about-grid">
-            
-            <!-- Kolom 1: Foto Profil & Floating Emoji -->
-            <div class="about-img-box">
-                <div class="about-img-backdrop"></div>
-                <img src="assets/images/deliaa.png" alt="Tentang Saya" class="about-photo">
-                
-                <div class="about-float-icon top-left">🐱</div>
-                <div class="about-float-icon bottom-right">🌸</div>
-            </div>
+        <di class="about-grid">
 
             <!-- Kolom 2: Deskripsi Teks & Stat Counter Estetis -->
             <div class="about-text-content">
@@ -144,20 +134,20 @@
 
             <!-- Kolom 3: Card Edukasi Timeline -->
             <div class="education-card">
-                <h3>🎓 Riwayat Pendidikan</h3>
+                <h3>Riwayat Pendidikan</h3>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <h4>SD Negeri 1 Sidaharja</h4>
-                            <span>Lulus Tahun 2020</span>
+                            <span>Lulus Tahun 2021</span>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <h4>SMP Negeri 3 Lakbok</h4>
-                            <span>Lulus Tahun 2023</span>
+                            <span>Lulus Tahun 2024</span>
                         </div>
                     </div>
                     <div class="timeline-item active">
@@ -169,7 +159,29 @@
                     </div>
                 </div>
             </div>
+  
+      <!-- Kolom Experience di dalam About Section -->
+<div class="exp-column">
+  <h3 class="exp-column-title">
+    <i class="bx bx-briefcase"></i> Experience
+  </h3>
 
+  <!-- Kartu Experience 1 -->
+  <div class="exp-card-item">
+    <span class="exp-badge-date">JULI 2026 - DESEMBER 2026</span>
+    <h4 class="exp-role-title">Web Developer Intern <span>@ Access Media</span></h4>
+    <p class="exp-desc">Membangun fitur aplikasi berbasis Laravel dan optimasi sistem sesuai standar industri.</p>
+  </div>
+
+  <!-- Kartu Experience 2 -->
+  <div class="exp-card-item">
+    <span class="exp-badge-date">JANUARI 2026 - JUNI 2026</span>
+    <h4 class="exp-role-title">Fullstack Student <span>@ TEFA</span></h4>
+    <p class="exp-desc">Mengembangkan berbagai proyek berbasis web kelompok dan mandiri.</p>
+  </div>
+</div>
+
+  </div>
         </div> <!-- Penutup .about-grid -->
     </div> <!-- Penutup .about-card-wrapper -->
 </section>
@@ -459,72 +471,6 @@
 
     </div>
     </div> 
-<!--==========================================================================
-    EXPERIENCE SECTION (CLEAN & CENTERED)
-==========================================================================-->
-<section class="experience" id="experience">
-  
-  <!-- Header Center -->
-  <div class="experience-header">
-    <h2>Experience ✨</h2>
-    <p>Klik tombol untuk melihat detail kegiatanku!</p>
-  </div>
-
-  <!-- Toggle Switch (Pill Button Emas) -->
-  <div class="exp-toggle">
-    <button class="exp-btn active" data-target="magang">Magang</button>
-    <button class="exp-btn" data-target="tefa">TEFA</button>
-  </div>
-
-  <!-- Tab 1: Magang (Aktif) -->
-  <div class="exp-content active" id="magang">
-    <!-- KODE BENAR -->
-<div class="exp-card">
-    <span class="exp-badge">JULI 2026 – DESEMBER 2026</span>
-    <h3>Web Developer Intern</h3>
-    <h4>Access Media</h4>
-    <p>Membangun fitur aplikasi berbasis Laravel dan optimasi sistem sesuai standar industri.</p>
-      <button class="btn btn-detail-gold" onclick="openExpModal(
-        'Detail Kegiatan',
-        'ACCESS MEDIA',
-        'assets/images/access.jpg',
-        [
-          'Membangun web responsif menggunakan Laravel.',
-          'Slicing desain dari Figma ke komponen kode.',
-          'Bekerja sama dalam tim.',
-          'Melakukan testing dan debugging fitur aplikasi.'
-        ]
-      )">
-        Lihat Detail ✨
-      </button>
-    </div>
-  </div>
-
-  <!-- Tab 2: TEFA (Sembunyi) -->
-  <div class="exp-content" id="tefa">
-    <div class="exp-card">
-      <span class="exp-badge">JULI 2025 – JUNI 2027</span>
-      <h3>UI/UX & Web Developer</h3>
-      <h4>Teaching Factory (TEFA)</h4>
-      <p>Mengerjakan proyek nyata dari klien di lingkungan sekolah.</p>
-      
-      <button class="btn btn-detail-gold" onclick="openExpModal(
-        'Detail Kegiatan',
-        'TEFA SOFTWARE HOUSE',
-        'assets/images/tefa.jpg',
-        [
-          'Merancang wireframe dan prototype UI/UX aplikasi.',
-          'Mengimplementasikan desain sistem ke bentuk kode web.',
-          'Melakukan komit kode secara rutin menggunakan Git/GitHub.',
-          'Mempresentasikan hasil proyek kepada mentor.'
-        ]
-      )">
-        Lihat Detail ✨
-      </button>
-    </div>
-  </div>
-
-</section>
 
 <!--==============================================================================
     MODAL DETAIL KEGIATAN EXPERIENCE (Diletakkan terpisah di luar section)
@@ -577,7 +523,7 @@
                 </div>
                 <div class="contact-info">
                     <span>EMAIL SAYA</span>
-                    <h4>dpuspitasarii961@gmail.com</h4>
+                    <h5>dpuspitasarii961@gmail.com</h5>
                 </div>
                 <div class="contact-arrow"></div>
             </a>
@@ -589,7 +535,7 @@
                 </div>
                 <div class="contact-info">
                     <span>WHATSAPP</span>
-                    <h4>+62 857 0315 9380</h4>
+                    <h5>+62 857 0315 9380</h5>
                 </div>
                 <div class="contact-arrow"></div>
             </a>
@@ -601,7 +547,7 @@
                 </div>
                 <div class="contact-info">
                     <span>INSTAGRAM</span>
-                    <h4>@_deliapuspitaa29</h4>
+                    <h5>@_deliapuspitaa29</h5>
                 </div>
                 <div class="contact-arrow"></div>
             </a>
@@ -613,7 +559,7 @@
                 </div>
                 <div class="contact-info">
                     <span>GITHUB</span>
-                    <h4>deliapuspitasari</h4>
+                    <h5>deliapuspitasari</h5>
                 </div>
                 <div class="contact-arrow"></div>
             </a>

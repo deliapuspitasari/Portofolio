@@ -13,29 +13,29 @@
 }
 
 /*==========================================================================
-   2. TEMA WARNA MIDNIGHT VELVET + AKSEN EMAS MEWAH
+   2. TEMA WARNA BARU (#4b79a1 -> #283e51)
 ==========================================================================*/
 :root {
     /* Latar Belakang Dark Cyber/Velvet */
-    --bg: #09071b;
-    --bg2: #0f0c29;
+    --bg: #090c15;
+    --bg2: #111827;
     --card: rgba(255, 255, 255, 0.03);
     
-    /* Gradasi Background Khusus: #0f0c29 -> #302b63 -> #24243e */
-    --grad-primary: linear-gradient(135deg, #302b63 0%, #24243e 50%, #0f0c29 100%);
-    --grad-hover: linear-gradient(135deg, #433c8a 0%, #323254 50%, #17133f 100%);
-    --grad-glow: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    /* Gradasi Background Utama (#4b79a1 -> #283e51) */
+    --grad-primary: linear-gradient(135deg, #4b79a1 0%, #283e51 100%);
+    --grad-hover: linear-gradient(135deg, #5a8bb8 0%, #345169 100%);
+    --grad-glow: radial-gradient(circle, rgba(75, 121, 161, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
 
-    /* GRADASI EMAS (GOLD ACCENTS) */
-    --gold: #d4af37;
-    --gold-light: #ffe082;
-    --grad-gold: linear-gradient(135deg, #ffe082 0%, #d4af37 50%, #aa771c 100%);
-    --grad-gold-hover: linear-gradient(135deg, #fff1b8 0%, #e5c158 50%, #c48f28 100%);
+    /* GRADASI AKSEN (#4b79a1 -> #283e51) */
+    --gold: #4b79a1;
+    --gold-light: #7cb0dc;
+    --grad-gold: linear-gradient(135deg, #7cb0dc 0%, #4b79a1 50%, #283e51 100%);
+    --grad-gold-hover: linear-gradient(135deg, #99c5eb 0%, #5a8bb8 50%, #345169 100%);
 
     /* Warna Teks & Border */
     --white: #ffffff;
-    --text: #b8b3db;
-    --border: rgba(212, 175, 55, 0.25); /* Border Emas Transparan */
+    --text: #94a3b8;
+    --border: rgba(75, 121, 161, 0.25); /* Border Transparan */
     --shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
     
     /* Tipografi */
@@ -52,7 +52,7 @@ body {
     position: relative;
 }
 
-/* Effect Ambient Glow Emas di Background */
+/* Effect Ambient Glow di Background */
 body::before {
     content: '';
     position: fixed;
@@ -67,7 +67,7 @@ body::before {
 }
 
 section {
-    padding: 100px 10%;
+    padding: 90px 10%;
     position: relative;
 }
 
@@ -79,12 +79,12 @@ section::after {
     right: 0;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, rgba(0,0,0,0) 70%);
+    background: radial-gradient(circle, rgba(75, 121, 161, 0.08) 0%, rgba(0,0,0,0) 70%);
     pointer-events: none;
 }
 
 /*==========================================================================
-   FONT JUDUL H2 (NORMAL TEGAK - ELEGANT)
+   FONT JUDUL H2 (UKURAN DIPERKESIL AGAR PROPORSIONAL & TIDAK OVERSIZED)
 ==========================================================================*/
 h2,
 .logo,
@@ -103,7 +103,21 @@ h2,
     letter-spacing: 0.5px;
 }
 
-/* Teks Aksens dengan Warna Gradasi Emas */
+/* Penyesuaian Ukuran Font Judul */
+.home h1 {
+    font-size: 42px; /* Diperkecil dari 56px */
+}
+
+h2, 
+.skills-header h2, 
+.projects-header h2, 
+.contact-header h2, 
+.experience-header h2, 
+.about-text-content h2 {
+    font-size: 20px; /* Diperkecil dari 30px */
+}
+
+/* Teks Aksens dengan Warna Gradasi */
 .logo span,
 .home p span,
 .about-text-content p span,
@@ -118,6 +132,7 @@ h2,
     -webkit-text-fill-color: transparent;
 }
 
+
 /*==========================================================================
    STATUS BADGE (AVAILABLE FOR WORK)
 ==========================================================================*/
@@ -126,11 +141,11 @@ h2,
     align-items: center;
     gap: 8px;
     padding: 6px 16px;
-    background: rgba(212, 175, 55, 0.1);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    background: rgba(75, 121, 161, 0.1);
+    border: 1px solid rgba(75, 121, 161, 0.3);
     border-radius: 50px;
     font-size: 12px;
-    color: #ffe082;
+    color: var(--gold-light);
     margin-bottom: 20px;
     backdrop-filter: blur(8px);
 }
@@ -138,20 +153,20 @@ h2,
 .pulsing-dot {
     width: 8px;
     height: 8px;
-    background-color: #22c55e;
+    background-color: #38bdf8;
     border-radius: 50%;
-    box-shadow: 0 0 10px #22c55e;
+    box-shadow: 0 0 10px #38bdf8;
     animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {
-    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
-    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(56, 189, 248, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
 }
 
 /*==========================================================================
-   3. PRELOADER DENGAN SPINNER EMAS
+   3. PRELOADER DENGAN SPINNER
 ==========================================================================*/
 #preloader {
     position: fixed;
@@ -184,15 +199,15 @@ h2,
     width: 60px;
     height: 60px;
     border: 3px solid rgba(255, 255, 255, 0.05);
-    border-top: 3px solid #d4af37;
-    border-right: 3px solid #ffe082;
+    border-top: 3px solid #4b79a1;
+    border-right: 3px solid #7cb0dc;
     border-radius: 50%;
     animation: spinLoader 0.9s linear infinite;
-    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+    filter: drop-shadow(0 0 15px rgba(75, 121, 161, 0.6));
 }
 
 .loader-text {
-    font-size: 38px;
+    font-size: 32px;
     color: var(--white);
     letter-spacing: 1px;
 }
@@ -231,12 +246,11 @@ h2,
     pointer-events: auto;
 }
 
-/* Logo "Delia." Dibuat Lebih Kecil & Pas */
 .logo {
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--white);
-    background: rgba(15, 12, 41, 0.88);
+    background: rgba(17, 24, 39, 0.88);
     padding: 6px 18px;
     border-radius: 50px;
     border: 1px solid var(--border);
@@ -249,8 +263,8 @@ h2,
     gap: 4px;
     padding: 6px 12px;
     width: fit-content;
-    background: rgba(15, 12, 41, 0.9);
-    border: 1px solid rgba(212, 175, 55, 0.35);
+    background: rgba(17, 24, 39, 0.9);
+    border: 1px solid rgba(75, 121, 161, 0.35);
     border-radius: 100px;
     backdrop-filter: blur(16px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
@@ -267,15 +281,15 @@ h2,
 }
 
 .navbar a:hover {
-    color: var(--gold-light, #ffe082);
-    background: rgba(212, 175, 55, 0.08);
+    color: var(--gold-light);
+    background: rgba(75, 121, 161, 0.12);
 }
 
 .navbar a.active {
-    color: var(--bg2, #0f0c29);
+    color: var(--white);
     font-weight: 700;
     background: var(--grad-gold);
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 4px 15px rgba(75, 121, 161, 0.4);
 }
 
 .menu-btn {
@@ -294,8 +308,8 @@ h2,
         align-items: center;
         width: 44px;
         height: 44px;
-        background: rgba(15, 12, 41, 0.9);
-        border: 1px solid rgba(212, 175, 55, 0.35);
+        background: rgba(17, 24, 39, 0.9);
+        border: 1px solid rgba(75, 121, 161, 0.35);
         border-radius: 14px;
         color: var(--white);
         font-size: 20px;
@@ -307,7 +321,7 @@ h2,
 
     .menu-btn:hover {
         border-color: var(--gold);
-        color: var(--gold-light, #ffe082);
+        color: var(--gold-light);
     }
 
     .navbar {
@@ -324,8 +338,8 @@ h2,
         gap: 6px;
         padding: 12px;
         
-        background: rgba(15, 12, 41, 0.95);
-        border: 1px solid rgba(212, 175, 55, 0.35);
+        background: rgba(17, 24, 39, 0.95);
+        border: 1px solid rgba(75, 121, 161, 0.35);
         border-radius: 20px;
         backdrop-filter: blur(20px);
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
@@ -398,19 +412,10 @@ h2,
     object-fit: cover;
 }
 
-.home h1 {
-    font-family: var(--font-title);
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 22px;
-    letter-spacing: 0.5px;
-}
-
 .home h1 .hi-text {
     font-style: italic;
     font-weight: 600;
-    color: #ffe082; 
+    color: var(--gold-light); 
     background: none;
     -webkit-text-fill-color: initial;
     margin-right: 10px;
@@ -434,11 +439,11 @@ h2,
 }
 
 mark.highlight {
-    background: rgba(212, 175, 55, 0.15);
-    color: #ffe082;
+    background: rgba(75, 121, 161, 0.2);
+    color: var(--gold-light);
     padding: 3px 10px;
     border-radius: 8px;
-    border: 1px solid rgba(212, 175, 55, 0.4);
+    border: 1px solid rgba(75, 121, 161, 0.4);
 }
 
 .image-backdrop {
@@ -460,14 +465,14 @@ mark.highlight {
     border-radius: 24px;
     position: relative;
     z-index: 2;
-    border: 1.5px solid rgba(212, 175, 55, 0.4); 
+    border: 1.5px solid rgba(75, 121, 161, 0.4); 
     box-shadow: var(--shadow);
 }
 
 .floating-icon {
     position: absolute;
-    background: rgba(15, 12, 41, 0.92);
-    border: 1px solid rgba(212, 175, 55, 0.4);
+    background: rgba(17, 24, 39, 0.92);
+    border: 1px solid rgba(75, 121, 161, 0.4);
     padding: 10px;
     border-radius: 14px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.7);
@@ -509,20 +514,20 @@ mark.highlight {
     justify-content: center;
     padding: 13px 30px;
     background: var(--grad-gold);
-    color: #0f0c29;
+    color: #ffffff;
     font-weight: 700;
     font-size: 14px;
     border-radius: 50px;
     border: none;
     transition: all 0.3s ease;
     cursor: pointer;
-    box-shadow: 0 8px 20px -4px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 8px 20px -4px rgba(75, 121, 161, 0.4);
 }
 
 .btn:hover {
     background: var(--grad-gold-hover);
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px -4px rgba(212, 175, 55, 0.6);
+    box-shadow: 0 12px 28px -4px rgba(75, 121, 161, 0.6);
 }
 
 .btn-outline {
@@ -533,46 +538,46 @@ mark.highlight {
 }
 
 .btn-outline:hover {
-    background: rgba(212, 175, 55, 0.1);
-    border-color: rgba(212, 175, 55, 0.6);
-    color: #ffe082;
+    background: rgba(75, 121, 161, 0.1);
+    border-color: rgba(75, 121, 161, 0.6);
+    color: var(--gold-light);
     transform: translateY(-2px);
 }
 
 /*==========================================================================
-   6. ABOUT ME SECTION
+   6. ABOUT SECTION (DESAIN EKSKLUSIF & MODERN UNTUK EXPERIENCE/EDUCATION)
 ==========================================================================*/
 .about-card-wrapper {
-    background: var(--card);
+    background: var(--bg2);
     border: 1px solid var(--border);
-    border-radius: 32px;
-    padding: 45px;
-    backdrop-filter: blur(12px);
+    border-radius: 28px;
+    padding: 40px;
+    backdrop-filter: blur(16px);
     position: relative;
+    box-shadow: var(--shadow);
 }
 
 .about-card-wrapper::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 15%;
-    right: 15%;
-    height: 1px;
+    left: 8%;
+    right: 8%;
+    height: 2px;
     background: var(--grad-gold);
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .about-grid {
     display: grid;
-    grid-template-columns: 300px 1fr 280px;
-    gap: 40px;
+    grid-template-columns: 260px 1fr 310px; /* Diperlebar sedikit untuk area kartu kanan */
+    gap: 32px;
     align-items: center;
 }
 
 .about-img-box {
     position: relative;
     width: 100%;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -580,21 +585,21 @@ mark.highlight {
 
 .about-img-backdrop {
     position: absolute;
-    width: 90%;
+    width: 100%;
     height: 100%;
     background: var(--grad-gold);
-    border-radius: 24px;
-    transform: rotate(-4deg);
-    opacity: 0.3;
+    border-radius: 20px;
+    transform: rotate(-3deg);
+    opacity: 0.25;
     z-index: 1;
-    filter: blur(10px);
+    filter: blur(12px);
 }
 
 .about-photo {
-    width: 90%;
-    height: 300px;
+    width: 100%;
+    height: 280px;
     object-fit: cover;
-    border-radius: 22px;
+    border-radius: 20px;
     position: relative;
     z-index: 2;
     border: 1px solid var(--border);
@@ -602,13 +607,13 @@ mark.highlight {
 
 .about-float-icon {
     position: absolute;
-    background: rgba(15, 12, 41, 0.9);
+    background: rgba(17, 24, 39, 0.9);
     border: 1px solid var(--border);
     padding: 8px 12px;
-    border-radius: 14px;
+    border-radius: 12px;
     box-shadow: var(--shadow);
     z-index: 3;
-    font-size: 16px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -633,19 +638,19 @@ mark.highlight {
 }
 
 .about-text-content h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 26px;
+    margin-bottom: 14px;
 }
 
 .about-text-content p {
     color: var(--text);
     font-size: 14px;
-    line-height: 1.8;
-    margin-bottom: 30px;
+    line-height: 1.7;
+    margin-bottom: 22px;
 }
 
 .about-text-content p a.email-link {
-    color: #ffe082;
+    color: var(--gold-light);
     text-decoration: underline;
     font-weight: 600;
     transition: color 0.3s ease;
@@ -657,14 +662,14 @@ mark.highlight {
 
 .about-stats {
     display: flex;
-    gap: 18px;
+    gap: 12px;
 }
 
 .stat-box {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 18px 20px;
+    border-radius: 16px;
+    padding: 14px;
     text-align: center;
     flex: 1;
     transition: all 0.35s ease;
@@ -672,13 +677,13 @@ mark.highlight {
 
 .stat-box:hover {
     background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(212, 175, 55, 0.6);
+    border-color: rgba(75, 121, 161, 0.6);
     transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+    box-shadow: 0 10px 25px rgba(75, 121, 161, 0.15);
 }
 
 .stat-box h3 {
-    font-size: 22px;
+    font-size: 20px;
     font-family: var(--font-title);
     background: var(--grad-gold);
     -webkit-background-clip: text;
@@ -687,89 +692,224 @@ mark.highlight {
 }
 
 .stat-box p {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
     margin-bottom: 0;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: var(--text);
 }
 
+/* =========================================================
+   TAMPILAN BARU EDUCATION / EXPERIENCE CARD (EKSKLUSIF)
+========================================================= */
 .education-card {
-    background: rgba(255, 255, 255, 0.015);
-    border: 1px dashed var(--border);
-    border-radius: 24px;
-    padding: 25px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 24px 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.01);
 }
 
 .education-card h3 {
-    font-size: 20px;
+    font-size: 16px;
+    color: var(--white);
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.5px;
+}
+
+.education-card h3::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 16px;
+    background: var(--grad-gold);
+    border-radius: 10px;
 }
 
 .timeline {
-    position: relative;
-    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-left: 0; /* Menghilangkan garis vertikal tua */
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 6px;
-    top: 5px;
-    bottom: 5px;
-    width: 2px;
-    background: var(--border);
-}
-
+/* Mengubah tiap item menjadi Card Melayang */
 .timeline-item {
     position: relative;
-    margin-bottom: 22px;
+    background: rgba(17, 24, 39, 0.7);
+    border: 1px solid rgba(75, 121, 161, 0.2);
+    border-radius: 14px;
+    padding: 14px 16px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-bottom: 0;
 }
 
-.timeline-item:last-child { margin-bottom: 0; }
+.timeline-item:hover {
+    transform: translateX(6px) translateY(-2px);
+    border-color: rgba(75, 121, 161, 0.6);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 12px rgba(75, 121, 161, 0.15);
+}
 
+/* Titik Indikator Glowing di Pojok Kanan Atas Kartu */
 .timeline-dot {
     position: absolute;
-    left: -19px;
-    top: 4px;
-    width: 10px;
-    height: 10px;
+    right: 14px;
+    top: 14px;
+    left: auto; /* Memindahkan dot dari kiri ke kanan */
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
-    background: var(--bg2);
-    border: 2px solid var(--text);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
 }
 
 .timeline-item.active .timeline-dot {
-    background: #d4af37;
-    border-color: #ffe082;
-    box-shadow: 0 0 10px #d4af37;
+    background: #7cb0dc;
+    box-shadow: 0 0 10px #4b79a1, 0 0 4px #7cb0dc;
+}
+
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .timeline-content h4 {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
+    color: var(--white);
+    line-height: 1.3;
 }
 
 .timeline-content span {
-    font-size: 12px;
+    font-size: 11px;
     color: var(--text);
+    display: inline-block;
 }
 
+/* Badge Tahun / Status yang Lebih Menonjol */
 .timeline-content .active-tag {
-    color: #ffe082;
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 4px;
+    padding: 2px 8px;
+    background: rgba(75, 121, 161, 0.15);
+    border: 1px solid rgba(75, 121, 161, 0.35);
+    border-radius: 6px;
+    color: var(--gold-light);
+    font-size: 10px;
     font-weight: 600;
 }
 
+/*==========================================================================
+   STYLING KARTU EXPERIENCE ABOUT (100% WORK & ESTETIK)
+==========================================================================*/
+
+/* Judul Kolom Experience */
+.exp-column-title {
+    font-family: var(--font-title, 'Playfair Display', serif);
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin-bottom: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+/* Container Item Kartu */
+.exp-card-item {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(17, 24, 39, 0.7) 100%) !important;
+    border: 1px solid rgba(75, 121, 161, 0.3) !important;
+    border-radius: 16px !important;
+    padding: 18px 20px !important;
+    margin-bottom: 16px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    backdrop-filter: blur(12px) !important;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Garis Aksen Glowing Kiri */
+.exp-card-item::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    height: 100% !important;
+    width: 4px !important;
+    background: linear-gradient(135deg, #7cb0dc 0%, #4b79a1 100%) !important;
+    border-top-left-radius: 16px !important;
+    border-bottom-left-radius: 16px !important;
+    opacity: 0.8 !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Hover Effect */
+.exp-card-item:hover {
+    transform: translateY(-4px) scale(1.01) !important;
+    border-color: rgba(124, 176, 220, 0.6) !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5), 0 0 20px rgba(75, 121, 161, 0.25) !important;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.06) 0%, rgba(17, 24, 39, 0.9) 100%) !important;
+}
+
+.exp-card-item:hover::before {
+    opacity: 1 !important;
+    width: 6px !important;
+}
+
+/* Badge Tanggal (Pill-style) */
+.exp-badge-date {
+    display: inline-block !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    color: #7cb0dc !important;
+    background: rgba(75, 121, 161, 0.18) !important;
+    border: 1px solid rgba(75, 121, 161, 0.35) !important;
+    padding: 4px 12px !important;
+    border-radius: 50px !important;
+    margin-bottom: 10px !important;
+}
+
+/* Judul Posisi / Role */
+.exp-role-title {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin-bottom: 6px !important;
+    line-height: 1.4 !important;
+}
+
+/* Nama Perusahaan / Instansi */
+.exp-role-title span {
+    color: #4b79a1 !important;
+    font-weight: 600 !important;
+}
+
+/* Teks Deskripsi */
+.exp-desc {
+    font-size: 12px !important;
+    color: #94a3b8 !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
 /*==========================================================================
    7. SKILLS & TECHNOLOGIES
 ==========================================================================*/
 .skills-header {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 
 .skills-header h2 {
-    font-size: 38px;
     margin-bottom: 10px;
 }
 
@@ -777,7 +917,7 @@ mark.highlight {
     color: var(--text);
     font-style: italic;
     font-size: 14px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .skills-toggle {
@@ -803,14 +943,14 @@ mark.highlight {
 
 .toggle-btn.active {
     background: var(--grad-gold);
-    color: #0f0c29;
-    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(75, 121, 161, 0.4);
 }
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 20px;
     max-width: 950px;
     margin: 0 auto;
 }
@@ -818,351 +958,208 @@ mark.highlight {
 .skill-item {
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 18px 22px;
+    border-radius: 16px;
+    padding: 16px 20px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 14px;
     transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .skill-item:hover {
-    transform: translateY(-6px);
-    border-color: rgba(212, 175, 55, 0.65);
+    transform: translateY(-5px);
+    border-color: rgba(75, 121, 161, 0.65);
     background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(75, 121, 161, 0.2);
 }
 
 .skill-icon-box {
-    width: 46px;
-    height: 46px;
+    width: 42px;
+    height: 42px;
     background: rgba(255, 255, 255, 0.04);
-    border-radius: 14px;
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .skill-icon-box img {
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     object-fit: contain;
 }
 
 .skill-info h4 {
-    font-size: 15px;
+    font-size: 14px;
     margin-bottom: 2px;
 }
 
 .skill-info span {
     font-size: 10px;
-    color: #ffe082;
+    color: var(--gold-light);
     font-weight: 700;
     letter-spacing: 1px;
 }
+@media (max-width: 768px) {
+  .skills-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
 
+  .skill-item {
+    padding: 12px !important;
+    gap: 10px !important;
+  }
+}
 /*==========================================================================
-   8. PROJECTS SECTION 
+   8. PROJECTS SECTION (DESKTOP: 4 KOLOM BERJAJAR, MOBILE: 2x2 GRID)
 ==========================================================================*/
 .projects {
-    padding: 100px 10%;
+    padding: 70px 5%; 
+}
+
+.projects-container {
+    max-width: 1280px; 
+    margin: 0 auto;
+    width: 100%;
 }
 
 .projects-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .projects-header h2 {
-    font-size: 38px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: var(--white);
 }
 
 .projects-header p {
     color: var(--text);
     font-style: italic;
-    font-size: 15px;
+    font-size: 14px;
 }
 
+/* Grid Layout Desktop: 4 Kolom Berjajar */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px;
-    max-width: 1100px;
-    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px; 
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .project-card {
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 24px;
+    border-radius: 16px;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     flex-direction: column;
-    box-shadow: var(--shadow);
-    backdrop-filter: blur(12px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(212, 175, 55, 0.65);
-    background: rgba(255, 255, 255, 0.04);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border-color: rgba(75, 121, 161, 0.5);
 }
 
 .project-img-box {
     width: 100%;
-    height: 240px;
+    height: 130px; 
     overflow: hidden;
-    position: relative;
-    background: var(--bg2);
+    background: #000;
 }
 
 .project-img-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
-}
-
-.project-card:hover .project-img-box img {
-    transform: scale(1.06);
+    object-position: top center;
 }
 
 .project-body {
-    padding: 28px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
 .project-body h3 {
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 14px; 
+    font-weight: 600;
     color: var(--white);
-    margin-bottom: 8px;
-}
-
-.project-tags {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 14px;
-    flex-wrap: wrap;
-}
-
-.project-tags span {
-    font-size: 11px;
-    padding: 4px 10px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(212, 175, 55, 0.25);
-    border-radius: 12px;
-    color: #ffe082;
-    font-weight: 500;
+    margin-bottom: 6px;
 }
 
 .project-body p {
+    font-size: 11px;
     color: var(--text);
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 25px;
+    line-height: 1.4;
+    margin-bottom: 12px;
     flex-grow: 1;
 }
 
 .project-actions {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    margin-top: 1.5rem;
+    gap: 8px;
+    margin-top: auto;
 }
 
 .btn-details {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     background: var(--grad-gold);
-    color: #0f0c29;
+    color: #ffffff;
     font-weight: 700;
-    font-size: 0.9rem;
-    padding: 0.6rem 1.4rem;
+    font-size: 0.8rem;
+    padding: 0.45rem 0.9rem;
     border-radius: 50px;
     border: none;
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+    box-shadow: 0 4px 15px rgba(75, 121, 161, 0.35);
 }
 
 .btn-details:hover {
     background: var(--grad-gold-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 6px 20px rgba(75, 121, 161, 0.5);
 }
 
 .btn-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 42px;
-    height: 42px;
+    width: 32px;
+    height: 32px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 12px;
+    border-radius: 10px;
     color: #f8fafc;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .btn-icon:hover {
-    border-color: #d4af37;
-    color: #ffe082;
-    background: rgba(212, 175, 55, 0.1);
+    border-color: #4b79a1;
+    color: #7cb0dc;
+    background: rgba(75, 121, 161, 0.1);
     transform: translateY(-2px);
 }
 
 /*==============================================================================
-    EXPERIENCE SECTION & MODAL
+   9. EXPERIENCE SECTION & MODAL DETAIL (DI-REDESIGN BIAR GA SEDERHANA)
 ==============================================================================*/
-.exp-modal {
-    position: fixed;
-    inset: 0;
-    display: none; 
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background: rgba(9, 7, 27, 0.85);
-    backdrop-filter: blur(10px);
-    z-index: 9999;
-}
-
-.exp-modal.active {
-    display: flex;
-}
-
-.exp-modal-card {
-    width: 100%;
-    max-width: 850px;
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: 28px;
-    padding: 35px;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9);
-    animation: modalPop 0.35s ease;
-}
-
-@keyframes modalPop {
-    from {
-        opacity: 0;
-        transform: scale(0.92);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.exp-modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-}
-
-.exp-modal-header h2 {
-    font-size: 26px;
-    color: var(--white);
-    margin-bottom: 4px;
-}
-
-.exp-modal-subtitle {
-    color: var(--gold-light);
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 1px;
-}
-
-.exp-modal-close {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border);
-    color: var(--white);
-    font-size: 22px;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s ease;
-}
-
-.exp-modal-close:hover {
-    background: var(--grad-gold);
-    color: var(--bg2);
-}
-
-.exp-modal-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: center;
-}
-
-.exp-modal-img-box {
-    width: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-}
-
-.exp-modal-img-box img {
-    width: 100%;
-    height: 100%;
-    max-height: 280px;
-    object-fit: cover;
-    display: block;
-}
-
-.exp-modal-content h3 {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--gold-light);
-    letter-spacing: 1.5px;
-    margin-bottom: 15px;
-}
-
-.exp-modal-content ul {
-    list-style: none;
-    padding: 0;
-}
-
-.exp-modal-content li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 12px;
-    color: var(--text);
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.exp-modal-content li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: var(--gold-light);
-    font-size: 20px;
-    line-height: 1;
-    top: 2px;
-}
-
 .experience {
-    padding: 100px 10%;
+    padding: 90px 10%;
     text-align: center;
 }
 
@@ -1171,8 +1168,6 @@ mark.highlight {
 }
 
 .experience-header h2 {
-    font-family: var(--font-title);
-    font-size: 38px;
     color: var(--white);
     margin-bottom: 8px;
 }
@@ -1191,17 +1186,17 @@ mark.highlight {
     border: 1px solid var(--border);
     border-radius: 50px;
     backdrop-filter: blur(12px);
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .exp-btn {
     border: none;
     background: transparent;
     color: var(--text);
-    padding: 10px 30px;
+    padding: 8px 24px;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     cursor: pointer;
     font-family: var(--font-main);
     transition: all 0.3s ease;
@@ -1209,9 +1204,9 @@ mark.highlight {
 
 .exp-btn.active {
     background: var(--grad-gold);
-    color: var(--bg2);
+    color: var(--white);
     font-weight: 700;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 4px 15px rgba(75, 121, 161, 0.4);
 }
 
 .exp-content {
@@ -1241,10 +1236,10 @@ mark.highlight {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 45px 35px;
+    padding: 35px 30px;
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 28px;
+    border-radius: 24px;
     backdrop-filter: blur(12px);
     box-shadow: var(--shadow);
     transition: all 0.35s ease;
@@ -1252,16 +1247,16 @@ mark.highlight {
 
 .exp-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(212, 175, 55, 0.6);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.15);
+    border-color: rgba(75, 121, 161, 0.6);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(75, 121, 161, 0.15);
 }
 
 .exp-badge {
     display: inline-block;
-    padding: 8px 22px;
-    margin-bottom: 20px;
-    background: rgba(212, 175, 55, 0.12);
-    border: 1px solid rgba(212, 175, 55, 0.35);
+    padding: 6px 18px;
+    margin-bottom: 16px;
+    background: rgba(75, 121, 161, 0.12);
+    border: 1px solid rgba(75, 121, 161, 0.35);
     border-radius: 50px;
     color: var(--gold-light);
     font-size: 12px;
@@ -1270,64 +1265,197 @@ mark.highlight {
 }
 
 .exp-card h3 {
-    font-family: var(--font-title);
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
     color: var(--white);
     margin-bottom: 6px;
 }
 
 .exp-card h4 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     background: var(--grad-gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 .exp-card p {
     color: var(--text);
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.7;
     max-width: 540px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .btn-detail-gold {
-    padding: 13px 36px;
+    padding: 11px 32px;
     background: var(--grad-gold);
-    color: var(--bg2);
-    font-size: 14px;
+    color: #ffffff;
+    font-size: 13px;
     font-weight: 700;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 8px 20px -4px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 8px 20px -4px rgba(75, 121, 161, 0.4);
     transition: all 0.3s ease;
 }
 
 .btn-detail-gold:hover {
     transform: translateY(-2px);
     background: var(--grad-gold-hover);
-    box-shadow: 0 12px 25px -4px rgba(212, 175, 55, 0.6);
+    box-shadow: 0 12px 25px -4px rgba(75, 121, 161, 0.6);
+}
+
+/* MODAL EXPERIENCE POPUP */
+.exp-modal {
+    position: fixed;
+    inset: 0;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(9, 12, 21, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+}
+
+.exp-modal.active {
+    display: flex;
+}
+
+.exp-modal-card {
+    width: 100%;
+    max-width: 800px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9);
+    animation: modalPop 0.35s ease;
+}
+
+@keyframes modalPop {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.exp-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(75, 121, 161, 0.15);
+}
+
+.exp-modal-header h2 {
+    font-size: 22px;
+    color: var(--white);
+    margin-bottom: 4px;
+}
+
+.exp-modal-subtitle {
+    color: var(--gold-light);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.exp-modal-close {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    color: var(--white);
+    font-size: 20px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.exp-modal-close:hover {
+    background: var(--grad-gold);
+    color: #ffffff;
+}
+
+.exp-modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: center;
+}
+
+.exp-modal-img-box {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.exp-modal-img-box img {
+    width: 100%;
+    height: 100%;
+    max-height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.exp-modal-content h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gold-light);
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.exp-modal-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.exp-modal-content li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 10px;
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.exp-modal-content li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--gold-light);
+    font-size: 18px;
+    line-height: 1;
+    top: 2px;
 }
 
 /*==========================================================================
    10. CONTACT SECTION
 ==========================================================================*/
 .contact {
-    padding: 100px 10%;
+    padding: 90px 10%;
 }
 
 .contact-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 .contact-header h2 {
-    font-size: 36px;
-    color: var(--white);
     margin-bottom: 10px;
 }
 
@@ -1376,7 +1504,7 @@ mark.highlight {
 
 .contact-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(212, 175, 55, 0.55);
+    border-color: rgba(75, 121, 161, 0.55);
     background: rgba(255, 255, 255, 0.04);
 }
 
@@ -1410,11 +1538,11 @@ mark.highlight {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1.5px;
-    color: #ffe082;
+    color: var(--gold-light);
     margin-bottom: 4px;
 }
 
-.contact-info h4 {
+.contact-info h5 {
     font-size: 14px;
     font-weight: 600;
     color: var(--white);
@@ -1436,7 +1564,7 @@ mark.highlight {
    11. FOOTER SECTION
 ==========================================================================*/
 .footer {
-    padding: 60px 10% 40px;
+    padding: 40px 10% 35px;
     text-align: center;
     background-color: var(--bg2);
     border-top: 1px solid var(--border);
@@ -1456,7 +1584,7 @@ mark.highlight {
 }
 
 .footer h2 {
-    font-size: 28px;
+    font-size: 20px;
     color: var(--white);
     margin-bottom: 8px;
 }
@@ -1471,29 +1599,29 @@ mark.highlight {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin: 25px 0;
+    margin: 20px 0;
 }
 
 .footer-social a {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 14px;
+    border-radius: 12px;
     background: var(--card);
     border: 1px solid var(--border);
     color: var(--white);
-    font-size: 17px;
+    font-size: 16px;
     transition: all 0.35s ease;
 }
 
 .footer-social a:hover {
     background: var(--grad-gold);
-    color: #0f0c29;
+    color: #ffffff;
     border-color: transparent;
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 8px 20px rgba(75, 121, 161, 0.4);
 }
 
 .copyright {
@@ -1505,7 +1633,7 @@ mark.highlight {
 }
 
 /*==========================================================================
-   12. MODAL PROJECT POPUP (OPTIMAL UNTUK DESKTOP & MOBILE)
+   12. MODAL PROJECT POPUP
 ==========================================================================*/
 .modal-overlay,
 .modal {
@@ -1514,11 +1642,11 @@ mark.highlight {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(9, 7, 27, 0.92);
+    background: rgba(9, 12, 21, 0.92);
     backdrop-filter: blur(14px);
-    display: none; /* Disembunyikan agar tidak bocor */
+    display: none; 
     justify-content: center;
-    align-items: flex-start; /* flex-start membuat tombol back di atas tidak terpotong */
+    align-items: flex-start;
     z-index: 10000;
     padding: 20px;
     overflow-y: auto;
@@ -1533,14 +1661,14 @@ mark.highlight {
     background: var(--bg2);
     color: var(--white);
     border: 1px solid var(--border);
-    border-radius: 28px;
-    padding: 35px;
+    border-radius: 24px;
+    padding: 30px;
     max-width: 850px;
     width: 100%;
     position: relative;
     margin: auto 0;
-    max-height: 90vh; /* Membatasi tinggi maksimum modal */
-    overflow-y: auto; /* Memungkinkan scroll internal jika konten sangat panjang */
+    max-height: 90vh;
+    overflow-y: auto;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
     animation: modalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -1563,12 +1691,12 @@ mark.highlight {
 
 .btn-back:hover {
     background: var(--grad-gold);
-    color: #0f0c29;
+    color: #ffffff;
     border-color: transparent;
 }
 
 .modal-top {
-    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    border-bottom: 1px solid rgba(75, 121, 161, 0.15);
     padding-bottom: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -1581,7 +1709,7 @@ mark.highlight {
 }
 
 .modal-project-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 800;
     color: var(--white);
     margin-bottom: 1rem;
@@ -1603,7 +1731,7 @@ mark.highlight {
     display: block;
     font-size: 0.75rem;
     font-weight: 800;
-    color: #ffe082;
+    color: var(--gold-light);
     letter-spacing: 1.5px;
     margin-bottom: 0.8rem;
 }
@@ -1615,13 +1743,13 @@ mark.highlight {
 }
 
 .tech-tags span {
-    background: rgba(212, 175, 55, 0.15);
-    color: #ffe082;
+    background: rgba(75, 121, 161, 0.15);
+    color: var(--gold-light);
     font-size: 0.8rem;
     font-weight: 700;
     padding: 0.4rem 1.1rem;
     border-radius: 50px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border: 1px solid rgba(75, 121, 161, 0.3);
 }
 
 .modal-right {
@@ -1647,7 +1775,7 @@ mark.highlight {
 
 .btn-github {
     background: var(--grad-gold);
-    color: #0f0c29;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 700;
     font-size: 0.95rem;
@@ -1669,10 +1797,10 @@ mark.highlight {
    13. TYPING EFFECT
 ==========================================================================*/
 .typing-container {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
-    min-height: 30px;
+    min-height: 28px;
 }
 
 .typing-cursor {
@@ -1687,12 +1815,18 @@ mark.highlight {
 }
 
 /*==========================================================================
-   14. RESPONSIVE MOBILE LAYOUT
+   14. RESPONSIVE MOBILE LAYOUT (2x2 GRID DILAKUKAN UNTUK PROJECTS)
 ==========================================================================*/
+
+/* --- TABLET & SMALL DESKTOP (<= 1024px) --- */
 @media (max-width: 1024px) {
     .about-grid { grid-template-columns: 1fr; }
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
-    .projects-grid { grid-template-columns: 1fr; }
+    
+    .projects-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 16px;
+    }
 
     section {
         padding: 50px 6%;
@@ -1741,7 +1875,7 @@ mark.highlight {
     }
 
     .home h1 {
-        font-size: 38px;
+        font-size: 32px;
         margin-bottom: 12px;
     }
 
@@ -1759,18 +1893,34 @@ mark.highlight {
     .about { padding-top: 20px; }
     .about-img-box { max-width: 300px; margin-bottom: 20px; }
 
-    .project-img-box { height: 200px; }
-    .project-body { padding: 22px; }
+    .project-img-box { height: 140px; }
+    .project-body { padding: 14px; }
 
-    .exp-card { padding: 30px 20px; }
-    .exp-card h3 { font-size: 22px; }
+    .exp-card { padding: 25px 20px; }
+    .exp-card h3 { font-size: 20px; }
     .exp-btn { padding: 8px 18px; font-size: 12px; }
 
     .typing-container { font-size: 16px; }
     .modal-body-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
+/* --- MOBILE MEDIUM (<= 768px) --- */
 @media (max-width: 768px) {
+    /* MENJAGA TERUS PROJECT 2 KOLOM (2x2 GRID) DI HP */
+    .projects { padding: 40px 4%; }
+    
+    .projects-grid { 
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 12px; 
+    }
+
+    .project-img-box { height: 110px; }
+    .project-body { padding: 10px; }
+    .project-body h3 { font-size: 13px; }
+    .project-body p { font-size: 10px; line-height: 1.4; margin-bottom: 10px; }
+    .btn-details { font-size: 0.72rem; padding: 0.35rem 0.7rem; }
+    .btn-icon { width: 30px; height: 30px; }
+
     .exp-modal-body {
         grid-template-columns: 1fr;
     }
@@ -1787,7 +1937,7 @@ mark.highlight {
     }
 
     .modal-project-title {
-        font-size: 20px !important;
+        font-size: 18px !important;
         margin-bottom: 10px;
     }
 
@@ -1808,6 +1958,7 @@ mark.highlight {
     }
 }
 
+/* --- MOBILE SMALL (<= 600px) --- */
 @media (max-width: 600px) {
     .skills-grid,
     .contact-grid {
@@ -1816,5 +1967,10 @@ mark.highlight {
 
     .about-stats {
         flex-direction: column;
+    }
+
+    /* Penyesuaian ekstra untuk HP layar kecil agar grid 2x2 tetap rapi */
+    .projects-grid { 
+        gap: 10px; 
     }
 }
