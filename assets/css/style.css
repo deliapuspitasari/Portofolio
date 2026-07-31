@@ -901,6 +901,53 @@ mark.highlight {
     line-height: 1.6 !important;
     margin: 0 !important;
 }
+/*==========================================================================
+   STYLING TOMBOL SOFT GLOW (Halus & Elegan)
+==========================================================================*/
+
+.btn-gallery-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-top: 14px !important;
+    padding: 8px 16px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    
+    /* Warna Teks */
+    color: #ffffff !important;
+    
+    /* Background Gradasi Biru Lembut (Tidak Terlalu Neon) */
+    background: linear-gradient(135deg, #325a7e 0%, #4a8db7 100%) !important;
+    
+    border: none !important;
+    border-radius: 50px !important;
+    
+    /* Bayangan Tipis Halus (Soft Glow) */
+    box-shadow: 0 3px 10px rgba(74, 141, 183, 0.25) !important;
+    
+    cursor: pointer !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Styling Ikon */
+.btn-gallery-toggle i {
+    font-size: 13px !important;
+    color: #ffffff !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* Hover Effect: Tetap Halus Saat Disentuh Kursor */
+.btn-gallery-toggle:hover {
+    background: linear-gradient(135deg, #3b6b94 0%, #539bc8 100%) !important;
+    box-shadow: 0 4px 14px rgba(74, 141, 183, 0.4) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Rotasi Panah Saat Galeri Aktif */
+.btn-gallery-toggle.active .arrow-icon {
+    transform: rotate(180deg) !important;
+}
 /* ==========================================================================
    EXPERIENCE GALLERY EXTENSION
 ========================================================================== */
@@ -2007,9 +2054,10 @@ mark.highlight {
     }
 
     .home h1 {
-        font-size: 32px;
+        font-size: 35px;
         margin-bottom: 12px;
     }
+   
 
     .home p {
         font-size: 13px;
@@ -2104,5 +2152,103 @@ mark.highlight {
     /* Penyesuaian ekstra untuk HP layar kecil agar grid 2x2 tetap rapi */
     .projects-grid { 
         gap: 10px; 
+    }
+}
+
+/*==========================================================================
+   STYLING NAMA HERO (DESKTOP & MOBILE RESPONSIVE)
+==========================================================================*/
+
+/* Teks Salam */
+.hero-text .hi-text {
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    margin-bottom: 8px !important;
+}
+
+/* Teks Nama "Delia Puspitasari" di Laptop/Web Desktop */
+.hero-text .hero-name {
+    font-family: 'Playfair Display', serif !important; /* Font serif asli kamu */
+    font-size: 4.2rem !important;  /* Bikin besar & bold mengisi area kosong */
+    font-weight: 700 !important;
+    color: #7cb0dc !important;     /* Warna biru khas kamu */
+    line-height: 1.1 !important;   /* Jarak baris rapat biar estetik */
+    margin-bottom: 16px !important;
+    letter-spacing: -1px !important;
+}
+
+/* Sub-title Role / Typing Effect di Bawah Nama */
+.hero-text .hero-role {
+    font-size: 1.2rem !important;
+    color: #94a3b8 !important;
+    margin-bottom: 30px !important;
+}
+
+/*==========================================================================
+   PENYESUAIAN TAMPILAN MOBILE (HP < 768px)
+==========================================================================*/
+@media screen and (max-width: 768px) {
+    .hero-text .hi-text {
+        font-size: 1rem !important;
+    }
+
+    .hero-text .hero-name {
+        font-size: 2.3rem !important; /* Pas & proporsional di layar HP */
+        line-height: 1.2 !important;
+    }
+
+    .hero-text .hero-role {
+        font-size: 1rem !important;
+    }
+}
+/*==========================================================================
+   STYLING TYPING EFFECT (Bigger & Responsive)
+==========================================================================*/
+
+/* Container Teks Typing */
+.typing-container {
+    display: flex !important;
+    align-items: center !important;
+    margin-top: 8px !important;
+    margin-bottom: 24px !important;
+    height: 32px !important; /* Mencegah layout meloncat saat teks dihapus */
+}
+
+/* Teks Utama Efek Mengetik */
+#typing-text {
+    font-size: 1.35rem !important; /* Diperbesar dari sebelumnya */
+    font-weight: 600 !important;
+    color: #4b79a1 !important;     /* Warna aksen biru khas kamu */
+    letter-spacing: 0.5px !important;
+}
+
+/* Kursor Kedip (|) */
+.typing-cursor {
+    font-size: 1.35rem !important;
+    font-weight: 400 !important;
+    color: #4b79a1 !important;
+    margin-left: 2px !important;
+    animation: blinkCursor 0.8s infinite !important;
+}
+
+/* Animasi Kedip Kursor */
+@keyframes blinkCursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/*==========================================================================
+   PENYESUAIAN DI HP (MOBILE < 768px)
+==========================================================================*/
+@media screen and (max-width: 768px) {
+    #typing-text,
+    .typing-cursor {
+        font-size: 1.25rem !important; /* Ukuran yang pas dan tidak terpotong di HP */
+    }
+    
+    .typing-container {
+        height: 28px !important;
+        margin-bottom: 20px !important;
     }
 }
